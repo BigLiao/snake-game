@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Snake Game</title>
+	<link rel="stylesheet" href="./snake.css">
+	<script src="snake.js"></script>
+</head>
+<body>
+	<h1>play game</h1>
+	<div class="wrapper">
+		<div id="stage"></div>		
+	</div>
+	<script>
+		var div = document.getElementById('stage');
+		var stage = new Stage(div, 40, 40);
+		var game = new Game(stage);
+		game.start();
+	</script>
+</body>
+</html>

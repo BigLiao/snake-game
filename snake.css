@@ -1,0 +1,19 @@
+.dot {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border: 1px solid #ccc;
+	background: #eee;
+}
+.dot.on {
+	background: #999;
+}
+#stage {
+	font-size: 0;
+}
+.wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
