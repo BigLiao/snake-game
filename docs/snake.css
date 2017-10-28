@@ -1,0 +1,20 @@
+.dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #cecece;
+	background: #f4f4f4;
+}
+.dot.on {
+	background: #999;
+}
+#stage {
+	font-size: 0;
+	border: 4px solid #cecece;
+}
+.wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
