@@ -11,11 +11,35 @@
 	<div class="wrapper">
 		<div id="stage"></div>		
 	</div>
+	<div>
+		<input type="button" value="开始" id="startBtn" onclick="game.start()"><br>
+		<input type="button" value="暂停" id="pauseBtn" onclick="game.pause()"><br>
+		<input type="button" value="继续" id="resumeBtn" onclick="game.resume()"><br>
+		<input type="button" value="重新开始" id="reStartBtn" onclick="game.reStart()">
+	</div>
 	<script>
 		var div = document.getElementById('stage');
-		var stage = new Stage(div, 40, 40);
+		var stage = new Stage(div, 20, 20);
 		var game = new Game(stage);
-		game.start();
+		document.onkeyup = function (e) {
+		    var key = e.keyCode;
+			switch (key) {
+				case 38:
+				    game.snake.changeDirection('up');
+				    break;
+				case 37:
+                    game.snake.changeDirection('left');
+                    break;
+                case 39:
+                    game.snake.changeDirection('right');
+                    break;
+                case 40:
+                    game.snake.changeDirection('down');
+                    break;
+				default:
+				    return;
+			}
+        };
 	</script>
 </body>
 </html>
